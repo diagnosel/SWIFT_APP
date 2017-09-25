@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="31v-40-RVP">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="cocoaPods" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nMO-EV-dJp">
+                                <rect key="frame" x="67" y="213" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="Tsg-SF-Hyq"/>
+                                    <constraint firstAttribute="height" constant="240" id="XES-2X-fmi"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="nMO-EV-dJp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FL2-MI-g6W"/>
+                            <constraint firstItem="nMO-EV-dJp" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="rdt-Dc-aHx"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="myImage" destination="nMO-EV-dJp" id="wOS-Ef-NTa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-249" y="39"/>
+        </scene>
+        <!--Feed View Controller-->
+        <scene sceneID="gj7-cl-IWO">
+            <objects>
+                <viewController id="31v-40-RVP" customClass="FeedViewController" customModule="cocoaPods" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Jt5-2p-4bU"/>
+                        <viewControllerLayoutGuide type="bottom" id="l22-NA-YRn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="muO-ap-mke">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="200" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Qln-RU-3G0">
+                                <rect key="frame" x="-0.5" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="31v-40-RVP" id="utT-C2-3Wu"/>
+                                    <outlet property="delegate" destination="31v-40-RVP" id="FdH-IF-s6H"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Qln-RU-3G0" firstAttribute="centerY" secondItem="muO-ap-mke" secondAttribute="centerY" id="6YZ-hp-4gZ"/>
+                            <constraint firstItem="Qln-RU-3G0" firstAttribute="centerX" secondItem="muO-ap-mke" secondAttribute="centerX" id="LYq-oq-20H"/>
+                            <constraint firstItem="Qln-RU-3G0" firstAttribute="width" secondItem="muO-ap-mke" secondAttribute="width" id="YXN-cy-I0d"/>
+                            <constraint firstItem="Qln-RU-3G0" firstAttribute="height" secondItem="muO-ap-mke" secondAttribute="height" id="hq6-f1-5oc"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="feedTableView" destination="Qln-RU-3G0" id="JnO-VG-zQA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OOs-oi-cPK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="875" y="40"/>
+        </scene>
+    </scenes>
+</document>

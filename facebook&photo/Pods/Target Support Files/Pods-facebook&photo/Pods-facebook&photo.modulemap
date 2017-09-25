@@ -1,0 +1,6 @@
+framework module Pods_facebook_photo {
+  umbrella header "Pods-facebook&photo-umbrella.h"
+
+  export *
+  module * { export * }
+}
